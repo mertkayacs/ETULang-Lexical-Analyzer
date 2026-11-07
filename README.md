@@ -26,6 +26,13 @@
   <a href="https://mertkayacs.com/?utm_source=github&utm_medium=readme&utm_campaign=ETULang-Lexical-Analyzer-repo&utm_content=portfolio-badge"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-1E2A38?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik0xMiAyYTE0LjUgMTQuNSAwIDAgMCAwIDIwYTE0LjUgMTQuNSAwIDAgMCAwLTIwTTIgMTJoMjAiLz48L2c%2BPC9zdmc%2B&logoColor=white"></a>
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/hero-dark.webp">
+    <img src="docs/assets/readme/hero-light.webp" alt="Terminal showing the token lines the ETULang analyzer writes for a small sample program" width="960">
+  </picture>
+</p>
+
 ETULang Lexical Analyzer is a hand-written lexer for ETULang, a small teaching language from a Programming Languages homework. It reads a program from a file with the .ETU extension and writes one line per token to an output file. Reserved words, identifiers, integer literals, operators and punctuation each get their own token name. The whole analyzer is a single Java file of about 450 lines.
 
 ---
@@ -39,6 +46,49 @@ The lexer stays small and each rule is easy to find in the source.
 | <img src="docs/assets/readme/icons/file-input.svg" width="18" height="18" alt=""> **Files in, tokens out** | Pass an .ETU file and an output file name. Each output line reads `Next token is RES_WORD` followed by the lexeme. |
 | <img src="docs/assets/readme/icons/list-checks.svg" width="18" height="18" alt=""> **Nine reserved words** | program, begin, end, if, then, else, while, integer and var are matched without regard to case. |
 | <img src="docs/assets/readme/icons/message-square-off.svg" width="18" height="18" alt=""> **Comments are skipped** | A percent sign toggles comment mode, and everything inside a comment is ignored. |
+
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/input-dark.webp">
+        <img src="docs/assets/readme/tour/input-light.webp" alt="Code card showing the six lines of the sample ETULang program">
+      </picture>
+      <h3>Sample program</h3>
+      A small ETULang program with a variable declaration, an assignment, an if and a comment between percent signs.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/tokens-dark.webp">
+        <img src="docs/assets/readme/tour/tokens-light.webp" alt="Terminal showing the first 24 token lines for the sample program">
+      </picture>
+      <h3>Token output</h3>
+      The analyzer writes one line per token. This is the start of the output for the sample program.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/error-dark.webp">
+        <img src="docs/assets/readme/tour/error-light.webp" alt="Terminal showing token lines ending in an error message for the input 12abc">
+      </picture>
+      <h3>Error case</h3>
+      A number followed by letters ends the analysis with an error line.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/source-dark.webp">
+        <img src="docs/assets/readme/tour/source-light.webp" alt="Code card showing the reserved word checks in hw1_mert_kaya.java">
+      </picture>
+      <h3>Reserved words</h3>
+      The first reserved-word checks in hw1_mert_kaya.java, matched without regard to case.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The sample programs were written for this tour. The terminal cards show real output of the analyzer, and the code card shows the file as it is in the repository.</sub></p>
 
 ## Features
 
