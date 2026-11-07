@@ -61,11 +61,11 @@ The lexer stays small and each rule is easy to find in the source.
     </td>
     <td width="50%" valign="top">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/tokens-dark.webp">
-        <img src="docs/assets/readme/tour/tokens-light.webp" alt="Terminal showing the first 14 token lines for the sample program">
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/assign-dark.webp">
+        <img src="docs/assets/readme/tour/assign-light.webp" alt="Code card showing how hw1_mert_kaya.java tells the assignment token from a colon">
       </picture>
-      <h3>Token output</h3>
-      The analyzer writes one line per token. This is the start of the output for the sample program.
+      <h3>Assignment token</h3>
+      A colon followed by an equals sign becomes the assignment token. A lone colon becomes a COLON token.
     </td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ The lexer stays small and each rule is easy to find in the source.
   </tr>
 </table>
 
-<p align="center"><sub>The sample programs were written for this tour. The terminal cards show real output of the analyzer, and the code card shows the file as it is in the repository.</sub></p>
+<p align="center"><sub>The sample programs were written for this tour. The terminal card shows real output of the analyzer, and the code cards show files as they are in the repository.</sub></p>
 
 ## Features
 
