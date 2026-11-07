@@ -62,7 +62,7 @@ The lexer stays small and each rule is easy to find in the source.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/tokens-dark.webp">
-        <img src="docs/assets/readme/tour/tokens-light.webp" alt="Terminal showing the first 24 token lines for the sample program">
+        <img src="docs/assets/readme/tour/tokens-light.webp" alt="Terminal showing the first 14 token lines for the sample program">
       </picture>
       <h3>Token output</h3>
       The analyzer writes one line per token. This is the start of the output for the sample program.
